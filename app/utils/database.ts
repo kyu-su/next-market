@@ -1,10 +1,11 @@
 // app/utils/database.ts
 
+import { env } from "@/env.mjs";
 import mongoose from "mongoose";
 
 const connectDB = async() => {
     try {
-        await mongoose.connect("mongodb+srv://kkcertine:xjSXxhBy88kkOv7V@cluster0.rqmnc68.mongodb.net/nextAppDatabase?retryWrites=true&w=majority");
+        await mongoose.connect(env.DATABASE_URL);
         console.log("Success: MongoDB Connected");
     } catch (e) {
         console.log("Failure: Unconnected to MongoDB");
