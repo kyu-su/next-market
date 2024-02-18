@@ -1,4 +1,4 @@
-// app/utils/database.ts
+// src/app/utils/database.ts
 
 import { env } from "@/env.mjs";
 import mongoose from "mongoose";

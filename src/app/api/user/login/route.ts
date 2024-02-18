@@ -23,9 +23,8 @@ export async function POST(request: NextRequest ) {
                 .setProtectedHeader({ alg: "HS256" })
                 .setExpirationTime("1d")
                 .sign(secretKey);
-            console.log(token);
 
-            return NextResponse.json({ message: "ログイン成功" });
+            return NextResponse.json({ message: "ログイン成功", token: token });
         }
 
         return NextResponse.json({ message: "ログイン失敗" });

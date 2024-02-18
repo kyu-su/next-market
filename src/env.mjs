@@ -11,6 +11,7 @@ export const env = createEnv({
   },
   // クライアントサイドの環境変数
   client: {
+    NEXT_PUBLIC_URL: z.string().url(),
   },
   // If you're using Next.js < 13.4.4, you'll need to specify the runtimeEnv manually
   // runtimeEnv: {
@@ -22,5 +23,6 @@ export const env = createEnv({
   experimental__runtimeEnv: {
     NEXT_PUBLIC_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_PUBLISHABLE_KEY,
     NEXT_PUBLIC_DEBUG_MESSAGE: process.env.NEXT_PUBLIC_DEBUG_MESSAGE,
+    NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
   },
 });
